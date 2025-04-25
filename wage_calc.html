@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wage Calculator</title>
+    <script>
+      function calculateWage() {
+        var wage = parseFloat(document.getElementById("wage").value);
+        var hours = parseFloat(document.getElementById("hours").value);
+        var totalWage = wage * hours;
+        alert("Your total wage is: $" + totalWage.toFixed(2));
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--=== Nav ===-->
+    <nav>
+      <ul>
+        <li id="nav-website-logo">Work Hour Organizer</li>
+        <div id="nav-link-div">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="wage_calc.html" class="active">Wage Calculator</a></li>
+          <li><a href="work_tracker.html">Work Tracker</a></li>
+        </div>
+      </ul>
+    </nav>
+    <!--=== Main ===-->
+    <main>
+      <h1>Wage Calculator</h1>
+
+      <form onsubmit="calculateWage(); return false;">
+        <label for="wage">Enter your wage:</label>
+        <input type="text" name="wage" id="wage" required /><br /><br />
+
+        <label for="hours"
+          >Enter the number of hours worked for the week:</label
+        >
+        <input type="text" name="hours" id="hours" required /><br /><br />
+
+        <input type="submit" value="Calculate Wage" />
+      </form>
+    </main>
+  </body>
+</html>

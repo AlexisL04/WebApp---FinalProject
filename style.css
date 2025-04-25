@@ -1,0 +1,79 @@
+:root {
+  --base-clr: #3c3c3c;
+  --secondary-clr: #282828;
+  --nav-bg-clr: #1f2020;
+  --accent-clr: #128ba8;
+  --text-clr: #c7c7c7;
+  --hover-clr: #3e3e3e;
+  --active-hover-clr: #128aa898;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: var(--text-clr);
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "navbar" "main";
+  height: 100vh;
+  background: var(--base-clr);
+}
+
+nav {
+  grid-area: navbar;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  background: var(--nav-bg-clr);
+  color: var(--text-clr);
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+}
+#nav-website-logo {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.25em;
+  user-select: none;
+}
+#nav-link-div {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+nav ul a,
+nav ul a:visited {
+  color: var(--text-clr);
+  text-decoration: none;
+  padding: 0.75rem;
+}
+nav ul a:hover {
+  background-color: var(--hover-clr);
+  border-radius: 1rem;
+}
+nav li {
+  padding: 0.25rem;
+}
+nav li .active {
+  background-color: var(--accent-clr);
+  border-radius: 1rem;
+}
+nav li .active:hover {
+  background-color: var(--active-hover-clr);
+}
+
+main {
+  grid-area: main;
+}
