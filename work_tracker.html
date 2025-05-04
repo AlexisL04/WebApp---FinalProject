@@ -23,11 +23,11 @@
       <h1>Work Tracker</h1>
       <p class="intro-paragraph">
         This page is for those who want to start to track their work week, Start
-        & End times, as well as hours work that week.
+        & End times, as well as hours worked that week.
       </p>
 
       <div class="container">
-        <h4>Add a new row</h4>
+        <h4>Add Another Row</h4>
 
         <div id="data">
           <input type="text" id="title" placeholder="Enter Work Week" />
@@ -38,20 +38,24 @@
           <button>Add</button>
         </div>
 
-        <table>
-          <tr>
-            <th>Title</th>
-            <th>Start Time</th>
-            <th>End Time</th>
-            <th>Hours Worked</th>
-            <th>Notes</th>
-          </tr>
-        </table>
+        <div class="table-wrapper">
+          <table>
+            <tr>
+              <th>Title</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+              <th>Hours Worked</th>
+              <th>Notes</th>
+            </tr>
+          </table>
+        </div>
       </div>
       <hr />
-      <button type="button" onclick="tableToCSV()">
-        Download Table as a CSV File
-      </button>
+      <div class="button-wrapper">
+        <button type="button" onclick="tableToCSV()">
+          Download Table as a CSV File
+        </button>
+      </div>
     </main>
     <script src="work_tracker_script.js"></script>
     <script src="table_to_csv_script.js"></script>

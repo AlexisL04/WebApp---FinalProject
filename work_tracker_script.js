@@ -25,3 +25,18 @@ btnAdd.addEventListener("click", () => {
 
   table.innerHTML += template;
 });
+
+// If there is content in the table, ask user if they wish to reload page
+window.onbeforeunload = function () {
+  const table = document.querySelector("table");
+  // Counts all rows in the table
+  const rowCounter = table?.rows.length || 0;
+
+  // If User added a row
+  if (rowCounter > 1) {
+    return "Are you sure you wish to reload the page?";
+  }
+
+  // No alert if empty
+  return null;
+};
