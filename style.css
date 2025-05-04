@@ -103,9 +103,10 @@ hr {
   margin: 1rem 0 1rem 0;
 }
 
-#home-paragraph {
+.intro-paragraph {
   text-align: center;
   padding: 0 5rem 0 5rem;
+  margin-bottom: 1rem;
 }
 
 a,
