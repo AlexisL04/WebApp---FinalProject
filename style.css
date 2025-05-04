@@ -72,8 +72,51 @@ nav li .active {
 }
 nav li .active:hover {
   background-color: var(--active-hover-clr);
+  text-shadow: 0 0 3px var(--active-hover-clr);
 }
 
 main {
   grid-area: main;
+}
+
+h1 {
+  text-align: center;
+  border-bottom: 0.125rem solid var(--text-clr);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.highlight-text {
+  color: var(--accent-clr);
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.text-shadow {
+  text-shadow: 0 0 3px var(--text-clr);
+}
+
+hr {
+  margin: 1rem 0 1rem 0;
+}
+
+#home-paragraph {
+  text-align: center;
+  padding: 0 5rem 0 5rem;
+}
+
+a,
+a:visited {
+  color: var(--accent-clr);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--active-hover-clr);
+}
+
+p {
+  font-size: 1.25rem;
 }
