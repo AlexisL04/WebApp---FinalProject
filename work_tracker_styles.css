@@ -53,7 +53,8 @@ td {
 }
 #data input,
 #data button,
-button {
+button,
+.input-wrapper label {
   border-radius: 5px;
   background-color: transparent;
   color: var(--text-clr);
@@ -62,23 +63,54 @@ button {
 }
 
 #data button,
-button {
+button,
+.input-wrapper label {
   cursor: pointer;
 }
 
 #data button:hover,
-button:hover {
+button:hover,
+.input-wrapper label {
   background-color: var(--hover-clr);
 }
 
-.button-wrapper {
+.button-wrapper,
+.input-wrapper {
   text-align: center;
 }
-.button-wrapper button {
+.button-wrapper button,
+.input-wrapper label {
   border: none;
   background-color: var(--accent-clr);
   border-radius: 6px;
 }
-.button-wrapper button:hover {
+.button-wrapper button:hover,
+.input-wrapper label:hover {
   background-color: var(--active-hover-clr);
+}
+
+.input-wrapper input[type="file"] {
+  display: none;
+}
+.input-wrapper label {
+  margin-right: 0.5rem;
+}
+
+.input-wrapper label,
+.button-wrapper button {
+  font-size: 1rem;
+}
+.border {
+  font-size: 2rem;
+}
+.input-wrapper span {
+  font-size: 0.95rem;
+}
+
+#bottom-clickables {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }

@@ -22,26 +22,44 @@
     <main>
       <h1>Work Tracker</h1>
       <p class="intro-paragraph">
-        This page is for those who want to start to track their work week, Start
-        & End times, as well as hours worked that week.
+        Organize the days you have worked! Input the work week (e.g., May
+        5th-11th), the exact date, start time and end time, hours worked that
+        day, and any notes you may have! Then, click add to add it to the table!
+        If you make a mistake, click "Delete a Row by ID" to remove the row.
+        Once done, click "Download Table as a CSV File!" If you return, you can
+        upload that CSV file to continue with your organization.
       </p>
 
       <div class="container">
         <h4>Add Another Row</h4>
 
         <div id="data">
-          <input type="text" id="title" placeholder="Enter Work Week" />
-          <input type="time" id="startTime" placeholder="Start Time" />
-          <input type="time" id="endTime" placeholder="End Time" />
-          <input type="number" id="hoursWorked" placeholder="Hours Worked" />
+          <input
+            type="text"
+            id="title"
+            placeholder="Enter Work Week"
+            required
+          />
+          <input type="date" id="date" placeholder="Enter Work Date" required />
+          <input type="time" id="startTime" placeholder="Start Time" required />
+          <input type="time" id="endTime" placeholder="End Time" required />
+          <input
+            type="number"
+            id="hoursWorked"
+            placeholder="Hours Worked"
+            required
+          />
           <input type="text" id="notes" placeholder="Notes" />
           <button>Add</button>
+          <button onclick="deleteRowById()">Delete a Row by ID</button>
         </div>
 
         <div class="table-wrapper">
-          <table>
+          <table id="table">
             <tr>
-              <th>Title</th>
+              <th>ID</th>
+              <th>Work Week</th>
+              <th>Date</th>
               <th>Start Time</th>
               <th>End Time</th>
               <th>Hours Worked</th>
@@ -51,12 +69,22 @@
         </div>
       </div>
       <hr />
-      <div class="button-wrapper">
-        <button type="button" onclick="tableToCSV()">
-          Download Table as a CSV File
-        </button>
+      <div id="bottom-clickables">
+        <div class="input-wrapper">
+          <label for="fileInput">Upload CSV</label>
+          <input type="file" accept=".csv" id="fileInput" />
+          <span id="fileName">No file chosen</span>
+        </div>
+        <span class="border">|</span>
+        <div class="button-wrapper">
+          <button type="button" onclick="tableToCSV()">
+            Download Table as a CSV File
+          </button>
+        </div>
       </div>
     </main>
+    <!-- Handling Quoted Fields in Notes for Proper CSV Conversion -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <script src="work_tracker_script.js"></script>
     <script src="table_to_csv_script.js"></script>
   </body>
