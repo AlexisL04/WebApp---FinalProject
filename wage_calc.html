@@ -30,7 +30,7 @@
     <main>
       <h1>Wage Calculator</h1>
 
-      <form onsubmit="calculateWage(); return false;">
+      <form class="calculator-form" onsubmit="calculateWage(); return false;">
         <label for="wage">Enter your wage:</label>
         <input type="text" name="wage" id="wage" required /><br /><br />
 
@@ -39,8 +39,22 @@
         >
         <input type="text" name="hours" id="hours" required /><br /><br />
 
-        <input type="submit" value="Calculate Wage" />
+        <div class="button-container">
+          <input type="submit" value="Calculate Wage" />
+        </div>
+
       </form>
+
+      <div class ="intro-paragraph">
+
+        <p style = "padding-top: 5%;">
+          This is a simple wage calculator. Enter your hourly wage and the
+          number of hours you worked in a week, and it will calculate your
+          total wage for that week.
+        </p>
+
+      </div>
+
     </main>
   </body>
 </html>

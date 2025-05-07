@@ -219,3 +219,31 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.calculator-form {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.calculator-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.calculator-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.calculator-form input[type="submit"] {
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 10px;
+}
