@@ -5,6 +5,7 @@
   --accent-clr: #128ba8;
   --accent-transparent-clr: #128aa8c9;
   --text-clr: #c7c7c7;
+  --text-transparent-clr: #c7c7c728;
   --hover-clr: #3e3e3e;
   --active-hover-clr: #128aa898;
 }
@@ -195,13 +196,13 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-clr);
+  background: var(--text-transparent-clr);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
   background: transparent;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.212);
   border-radius: 6px;
 }
 
