@@ -141,6 +141,8 @@ hr {
   width: 100%;
   align-items: center;
   padding-top: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
 }
 .left-example {
   padding-right: 2.5rem;
@@ -165,11 +167,13 @@ img {
 
 h4 {
   font-style: italic;
-  background-color: var(--accent-transparent-clr);
   text-align: center;
   width: 100%;
   padding: 0.125rem 0;
   border-radius: 0.5rem;
+}
+.background {
+  background-color: var(--accent-transparent-clr);
 }
 
 .border {
