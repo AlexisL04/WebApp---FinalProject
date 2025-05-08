@@ -293,8 +293,7 @@ td {
 #data input,
 #data button,
 button,
-.input-wrapper label,
-#calculate-button {
+.input-wrapper label {
   border-radius: 5px;
   background-color: transparent;
   color: var(--text-clr);
@@ -311,9 +310,12 @@ button,
 
 #data button:hover,
 button:hover,
-.input-wrapper label:hover,
-#calculate-button:hover {
+.input-wrapper label:hover {
   background-color: var(--hover-clr);
+}
+
+#calculate-button:hover {
+  background-color: lightgrey;
 }
 
 .button-wrapper,
