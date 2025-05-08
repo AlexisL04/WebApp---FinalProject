@@ -6,10 +6,10 @@
     <title>Wage Calculator</title>
     <script>
       function calculateWage() {
-        var wage = parseFloat(document.getElementById("wage").value);
-        var hours = parseFloat(document.getElementById("hours").value);
+        var wage = parseFloat(document.getElementById('wage').value);
+        var hours = parseFloat(document.getElementById('hours').value);
         var totalWage = wage * hours;
-        alert("Your total wage is: $" + totalWage.toFixed(2));
+        alert('Your total wage is: $' + totalWage.toFixed(2));
       }
     </script>
     <link rel="stylesheet" href="style.css" />
@@ -48,7 +48,7 @@
         <input type="text" name="hours" id="hours" required /><br /><br />
 
         <div class="button-container">
-          <input type="submit" value="Calculate Wage" />
+          <input type="submit" value="Calculate Wage" id="calculate-button" />
         </div>
       </form>
     </main>

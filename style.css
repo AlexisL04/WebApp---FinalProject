@@ -26,7 +26,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
-  grid-template-areas: "navbar" "main";
+  grid-template-areas: 'navbar' 'main';
   height: 100vh;
   background: var(--base-clr);
 }
@@ -206,14 +206,14 @@ a:hover {
   border-radius: 6px;
 }
 
-input[type="time"]::-webkit-calendar-picker-indicator,
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type='time']::-webkit-calendar-picker-indicator,
+input[type='date']::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -230,13 +230,13 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-bottom: 5px;
 }
 
-.calculator-form input[type="text"] {
+.calculator-form input[type='text'] {
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
 }
 
-.calculator-form input[type="submit"] {
+.calculator-form input[type='submit'] {
   padding: 10px 15px;
   margin-top: 10px;
 }
@@ -293,7 +293,8 @@ td {
 #data input,
 #data button,
 button,
-.input-wrapper label {
+.input-wrapper label,
+#calculate-button {
   border-radius: 5px;
   background-color: transparent;
   color: var(--text-clr);
@@ -303,13 +304,15 @@ button,
 
 #data button,
 button,
-.input-wrapper label {
+.input-wrapper label,
+#calculate-button {
   cursor: pointer;
 }
 
 #data button:hover,
 button:hover,
-.input-wrapper label {
+.input-wrapper label:hover,
+#calculate-button:hover {
   background-color: var(--hover-clr);
 }
 
@@ -328,7 +331,7 @@ button:hover,
   background-color: var(--active-hover-clr);
 }
 
-.input-wrapper input[type="file"] {
+.input-wrapper input[type='file'] {
   display: none;
 }
 .input-wrapper label {
